@@ -15,41 +15,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import Vue from 'vue';
-import Vodal from '../../dist';
-
-Vue.component(Vodal.name, Vodal);
-
-export default {
-  name: 'app',
-
-  data() {
-    return {
-      show: false,
-      animation: '',
-      paddingTop: `paddingTop: ${(window.innerHeight - 440) / 2}px`,
-      types: ['zoom', 'fade', 'flip', 'door', 'rotate', 'slideUp', 'slideDown', 'slideLeft', 'slideRight']
-    }
-  },
-
-  methods: {
-    delay(index) {
-      return `
-        animationDelay: ${index * 100}ms;
-        WebkitAnimationDelay: ${index * 100}ms;
-      `;
-    },
-
-    onShow(animation) {
-      this.animation = animation;
-      this.show = true;
-    }
-  }
-}
-</script>
-
 <style>
 @import "../../src/style/common.css";
 @import "../../src/style/door.css";
@@ -270,3 +235,37 @@ input::-moz-focus-inner {
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .2), 0 0 1px transparent;
 }
 </style>
+
+<script>
+import Vue from 'vue';
+import Vodal from '../../dist';
+
+Vue.component(Vodal.name, Vodal);
+
+export default {
+  name: 'app',
+
+  data() {
+    return {
+      show: false,
+      animation: '',
+      paddingTop: `paddingTop: ${(window.innerHeight - 420) / 2}px`,
+      types: ['zoom', 'fade', 'flip', 'door', 'rotate', 'slideUp', 'slideDown', 'slideLeft', 'slideRight']
+    }
+  },
+
+  methods: {
+    delay(index) {
+      return `
+        animationDelay: ${index * 50}ms;
+        WebkitAnimationDelay: ${index * 50}ms;
+      `;
+    },
+
+    onShow(animation) {
+      this.animation = animation;
+      this.show = true;
+    }
+  }
+}
+</script>
