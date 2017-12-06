@@ -23,15 +23,15 @@ export default {
     },
     width: {
       type: Number,
-      default: 400
+      default: 450
     },
     height: {
       type: Number,
-      default: 240
+      default: 250
     },
     duration: {
       type: Number,
-      default: 300
+      default: 325
     },
     measure: {
       type: String,
@@ -82,7 +82,7 @@ export default {
         width: this.width + this.measure,
         height: this.height + this.measure,
         animationDuration: `${this.duration}ms`,
-        ...this.customStyles
+        ...this.customStyles // Not IE Supported as Spread
       }
     }
   },
