@@ -240,6 +240,7 @@ input::-moz-focus-inner {
 import Vue from 'vue';
 import Vodal from '../../dist';
 
+// Here we hook the component
 Vue.component(Vodal.name, Vodal);
 
 export default {
